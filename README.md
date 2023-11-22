@@ -2,7 +2,10 @@
 
 ## Description
 
-Todo . . . .
+TODO APP :
+
+An application that can keep track/overview over thing that needs to be done.
+The primary gola for this application is to add, edit, delete and mark things as done when its need.
 
 ## Requirements
 

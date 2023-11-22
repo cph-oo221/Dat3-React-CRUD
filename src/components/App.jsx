@@ -1,9 +1,10 @@
-import "./App.css";
+import "../styels/App.css";
+import Todo from "./Todo";
 
 function App() {
   return (
     <div>
-      <p>he was here</p>
+      <Todo />
     </div>
   );
 }
