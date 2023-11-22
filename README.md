@@ -1,7 +1,5 @@
 # Dat3-React-CRUD
 
-## Group members:
-
 ## Description
 
 Todo . . . .
