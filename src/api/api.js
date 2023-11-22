@@ -3,26 +3,26 @@ import fetchData from "../utils.mjs";
 const API_URL = "http://localhost:3001/";
 
 // get all users
-export function getUsers(callback) {
+export function getTodos(callback) {
   fetchData(`${API_URL}todos`, callback, "GET");
 }
 
 // get user by id
-export function getUserById(id, callback) {
+export function getTodoById(id, callback) {
   fetchData(`${API_URL}todos/${id}`, callback, "GET");
 }
 
 // add user
-export function addUser(user, callback) {
-  fetchData(`${API_URL}todos`, callback, "POST", user);
+export function addTodo(todo, callback) {
+  fetchData(`${API_URL}todos`, callback, "POST", todo);
 }
 
 // edit user
-export function editUser(user, callback) {
-  fetchData(`${API_URL}todos/${user.id}`, callback, "PUT", user);
+export function editTodo(todo, callback) {
+  fetchData(`${API_URL}todos/${todo.id}`, callback, "PUT", todo);
 }
 
 // delete user
-export function deleteUser(id, callback) {
+export function deleteTodo(id, callback) {
   fetchData(`${API_URL}todos/${id}`, callback, "DELETE");
 }

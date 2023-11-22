@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import "../styels/Todo.css";
 import { useState } from "react";
-import { getUsers, addUser } from "../api/api";
+import { getTodos, addTodo, deleteTodo } from "../api/api";
 
 function Todo() {
   const [todos, setTodos] = useState([]);
@@ -11,8 +11,20 @@ function Todo() {
   const prioRef = useRef(null);
 
   useEffect(() => {
-    getUsers(setTodos);
-  }, [todos]);
+    getTodos(setTodos);
+  }, []);
+
+  async function addTodoHandler() {
+    const newTodo = {
+      id: todos.length + 1,
+      note: noteRef.current.value,
+      dueDate: dateRef.current.value,
+      priority: prioRef.current.value,
+    };
+    const updatedTodos = [...todos, newTodo];
+    setTodos(updatedTodos);
+    await addTodo(newTodo, setTodos);
+  }
 
   return (
     <div id="todo-container">
@@ -22,24 +34,12 @@ function Todo() {
         <input type="text" placeholder="Note" ref={noteRef} />
         <input type="date" ref={dateRef} />
         <select ref={prioRef}>
-          <option>Priority</option>
           <option>High</option>
           <option>Medium</option>
           <option>Low</option>
         </select>
 
-        <button
-          id="btn-add"
-          onClick={() => {
-            const newTodo = {
-              id: todos.length + 1,
-              note: noteRef.current.value,
-              dueDate: dateRef.current.value,
-              priority: prioRef.current.value,
-            };
-            addUser(newTodo);
-          }}
-        >
+        <button id="btn-add" onClick={addTodoHandler}>
           Add Todo
         </button>
       </div>
@@ -57,13 +57,16 @@ function Todo() {
         <tbody>
           {todos.map((todo, index) => (
             <tr key={todo.id}>
-              <td>{index}</td>
+              <td>{index + 1}</td>
               <td>{todo.note}</td>
               <td>{todo.dueDate}</td>
               <td>{todo.priority}</td>
               <td>
                 <button id="btn-edit">Edit</button>
-                <button id="btn-delete" onClick={() => {}}>
+                <button
+                  id="btn-delete"
+                  onClick={() => deleteTodo(todo.id, setTodos)}
+                >
                   Delete
                 </button>
               </td>
