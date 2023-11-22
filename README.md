@@ -24,3 +24,5 @@ The project has to contain the following:
 - Use the `json-server` to persist data.
 - All four CRUD operations should be implemented.
 - All CRUD functions should be separated into a separate file.
+
+Do a short video presentation of your project where you show your user interface, explain how it works and guide us through your code. Both your link to the video and code should be emailed to your group-teacher.
