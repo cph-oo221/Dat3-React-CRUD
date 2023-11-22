@@ -1,4 +1,4 @@
-import fetchData from "../utils.mjs";
+import fetchData from "../modules/utils.mjs";
 
 const API_URL = "http://localhost:3001/";
 
