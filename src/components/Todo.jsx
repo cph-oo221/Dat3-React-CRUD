@@ -1,7 +1,6 @@
-import { useEffect, useRef } from "react";
 import "../styels/Todo.css";
-import { useState } from "react";
-import { getTodos, addTodo, deleteTodo } from "../api/api";
+import { useState, useEffect, useRef } from "react";
+import { getTodos, addTodo, deleteTodo, editTodo } from "../api/api";
 
 function Todo() {
   const [todos, setTodos] = useState([]);
@@ -29,7 +28,6 @@ function Todo() {
   return (
     <div id="todo-container">
       <h1>My Todos</h1>
-
       <div>
         <input type="text" placeholder="Note" ref={noteRef} />
         <input type="date" ref={dateRef} />
