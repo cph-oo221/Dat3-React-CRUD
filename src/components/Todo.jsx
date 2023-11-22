@@ -11,8 +11,10 @@ function Todo() {
   const prioRef = useRef(null);
 
   useEffect(() => {
-    getTodos(setTodos);
-  }, []);
+    if (todos.length === 0) {
+      getTodos(setTodos);
+    }
+  }, [todos]);
 
   async function addTodoHandler() {
     const newTodo = {
@@ -21,9 +23,7 @@ function Todo() {
       dueDate: dateRef.current.value,
       priority: prioRef.current.value,
     };
-    const updatedTodos = [...todos, newTodo];
-    setTodos(updatedTodos);
-    await addTodo(newTodo, setTodos);
+    await addTodo([...todos, newTodo], setTodos);
   }
 
   return (
@@ -55,6 +55,7 @@ function Todo() {
           </tr>
         </thead>
         <tbody>
+          {console.table(todos)}
           {todos.map((todo, index) => (
             <tr key={todo.id}>
               <td>{index + 1}</td>
@@ -65,7 +66,12 @@ function Todo() {
                 <button id="btn-edit">Edit</button>
                 <button
                   id="btn-delete"
-                  onClick={() => deleteTodo(todo.id, setTodos)}
+                  onClick={() =>
+                    deleteTodo(todo.id, () => {
+                      const newTodos = todos.filter((t) => t.id !== todo.id);
+                      setTodos(newTodos);
+                    })
+                  }
                 >
                   Delete
                 </button>
