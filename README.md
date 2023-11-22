@@ -2,12 +2,6 @@
 
 ## Group members:
 
-##### Gruppe: _Team A - Group 8:_
-
-- Sebastian Klitte Egeberg - Github: **[Sebbedeb](https://github.com/Sebbedeb)**
-- Lasse Baggesgård Hansen - Github: **[kotteletfisk](https://github.com/kotteletfisk)**
-- Oskar Daniel Olsen - Github: **[cph-oo221](https://github.com/cph-oo221)**
-
 ## Description
 
 Todo . . . .
