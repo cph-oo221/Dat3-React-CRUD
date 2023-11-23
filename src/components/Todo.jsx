@@ -4,6 +4,7 @@ import { getTodos } from "../api/api";
 import Display from "./DisplayTodos";
 import TodoForm from "./TodoForm";
 import Line from "./SeparationLine";
+import TodoFilter from "./TodoFilter";
 
 function Todo() {
   const [todos, setTodos] = useState([]);
@@ -30,9 +31,9 @@ function Todo() {
         update={update}
         setUpdate={setUpdate}
       />
-      <Line />
-      <p>filter</p>
-      <Line />
+      <TodoFilter todos={todos} setTodos={setTodos}>
+        <Line />
+      </TodoFilter>
       <Display todos={todos} setTodos={setTodos} setUpdate={setUpdate} />
     </div>
   );
