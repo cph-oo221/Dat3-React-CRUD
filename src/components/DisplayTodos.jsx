@@ -16,9 +16,9 @@ function Display({ todos, setTodos, setUpdate }) {
         </thead>
         <tbody>
           {console.table(todos)}
-          {todos.map((todo, index) => (
+          {todos.map((todo) => (
             <tr key={todo.id}>
-              <td>{index + 1}</td>
+              <td>{todo.id}</td>
               <td>{todo.note}</td>
               <td>{todo.dueDate}</td>
               <td>{todo.priority}</td>
