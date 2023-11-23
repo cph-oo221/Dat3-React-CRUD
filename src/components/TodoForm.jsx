@@ -54,8 +54,6 @@ function TodoForm({ todos, setTodos, edit, setEdit, update, setUpdate }) {
         onClick={() => {
           if (edit) {
             const updateTodo = todoCurrent(update.id);
-
-            console.log("yoyoyoyoy ", updateTodo);
             editTodo(updateTodo, () => {
               const newTodos = todos.map((todo) => {
                 if (todo.id === update.id) {
