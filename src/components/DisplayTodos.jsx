@@ -15,7 +15,6 @@ function Display({ todos, setTodos, setUpdate }) {
           </tr>
         </thead>
         <tbody>
-          {console.table(todos)}
           {todos.map((todo) => (
             <tr key={todo.id}>
               <td>{todo.id}</td>
@@ -28,7 +27,6 @@ function Display({ todos, setTodos, setUpdate }) {
                   onClick={() => {
                     const oldTodo = todos.find((t) => t.id === todo.id);
                     setUpdate(oldTodo);
-                    console.log("the old todo is", oldTodo);
                   }}
                 >
                   Edit
