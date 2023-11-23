@@ -1,7 +1,7 @@
 <div align="center">
-    <h1><img src="src/img/todo.png" alt="drawing" width="22"/>
+    <h1><img src="res/img/todo.png" alt="drawing" width="22"/>
     Dat3 React CRUD - TODO APP 
-    <img src="src/img/todo.png" alt="drawing" width="22"/>
+    <img src="res/img/todo.png" alt="drawing" width="22"/>
     </h1>
 </div>
 
@@ -28,4 +28,4 @@ The primary goal of this application is to provide a seamless experience for man
 
 ## Components
 
-![Components](src/img/components.png)
+![Components](res/img/components.png)
