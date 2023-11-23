@@ -10,10 +10,12 @@ function Todo() {
   const [todos, setTodos] = useState([]);
   const [update, setUpdate] = useState(null);
   const [edit, setEdit] = useState(false);
+  const [initLoad, setInitLoad] = useState(true);
 
   useEffect(() => {
-    if (todos.length === 0) {
+    if (initLoad) {
       getTodos(setTodos);
+      setInitLoad(false);
     }
 
     if (update) {
@@ -31,9 +33,11 @@ function Todo() {
         update={update}
         setUpdate={setUpdate}
       />
+
       <TodoFilter todos={todos} setTodos={setTodos}>
         <Line />
       </TodoFilter>
+
       <Display todos={todos} setTodos={setTodos} setUpdate={setUpdate} />
     </div>
   );
