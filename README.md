@@ -1,11 +1,4 @@
-<style>
-    h1 {
-        text-align: center;
-        font-size: 30px;
-    }
-</style>
-
-<div>
+<div align="center">
     <h1>Dat3 React CRUD - TODO APP <img src="src/img/todo.png" alt="drawing" width="22"/></h1>
 </div>
 
