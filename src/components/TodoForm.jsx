@@ -36,13 +36,13 @@ function TodoForm({ todos, setTodos, edit, setEdit, update, setUpdate }) {
   return (
     <div>
       <h1>My Todos ({todos.length})</h1>
-      <label htmlFor="note">Note</label>
+      <label htmlFor="note">Note:</label>
       <input type="text" id="note" placeholder="Note" ref={noteRef} />
 
-      <label htmlFor="date">Due Date</label>
+      <label htmlFor="date">Due Date:</label>
       <input type="date" ref={dateRef} />
 
-      <label htmlFor="priority">Priority</label>
+      <label htmlFor="priority">Priority:</label>
       <select id="priority" ref={prioRef}>
         <option>High</option>
         <option>Medium</option>
