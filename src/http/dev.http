@@ -1,0 +1,36 @@
+GET http://localhost:3001/todos
+
+###
+
+GET http://localhost:3001/todos/1
+
+###
+
+POST http://localhost:3001/todos
+Content-Type: application/json
+Accept: application/application/json
+
+{
+    "id": 3,
+    "note": "Buy watermelon",
+    "dueDate": "2023-11-23",
+    "priority": "Low"
+}
+
+###
+
+PUT http://localhost:3001/todos/1
+Content-Type: application/json
+Accept: application/json
+
+{
+    "id": "3",
+    "note": "Buy milk",
+    "dueDate": "2024-01-01",
+    "priority": "Low"
+}
+
+### 
+
+DELETE http://localhost:3001/todos/3
+Accept: application/json

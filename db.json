@@ -3,14 +3,20 @@
     {
       "id": 1,
       "note": "Buy milk",
-      "dueDate": "2019-01-01",
-      "priority": "HIGH"
+      "dueDate": "2024-01-12",
+      "priority": "Low"
     },
     {
       "id": 2,
       "note": "Buy eggs",
-      "dueDate": "2019-01-01",
-      "priority": "HIGH"
+      "dueDate": "2023-11-01",
+      "priority": "High"
+    },
+    {
+      "id": 3,
+      "note": "Do homework",
+      "dueDate": "2023-11-24",
+      "priority": "Low"
     }
   ]
 }
