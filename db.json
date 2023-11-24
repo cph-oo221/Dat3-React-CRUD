@@ -2,21 +2,21 @@
   "todos": [
     {
       "id": 1,
-      "note": "Buy milk",
-      "dueDate": "2024-01-12",
-      "priority": "Low"
+      "note": "C",
+      "dueDate": "2023-12-01",
+      "priority": "Medium"
     },
     {
       "id": 2,
-      "note": "Buy eggs",
-      "dueDate": "2023-11-01",
+      "note": "React",
+      "dueDate": "2023-11-29",
       "priority": "High"
     },
     {
       "id": 3,
-      "note": "Do homework",
-      "dueDate": "2023-11-24",
-      "priority": "Low"
+      "note": "C#",
+      "dueDate": "2023-11-26",
+      "priority": "Medium"
     }
   ]
 }
