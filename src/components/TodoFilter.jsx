@@ -2,6 +2,7 @@ function TodoFilter({ children, todos, setTodos }) {
   const handleSort = (e) => {
     const option = e.target.value;
     let sortedTodos;
+    const arr = ["High", "Medium", "Low"];
 
     switch (option) {
       case "Id":
@@ -16,9 +17,9 @@ function TodoFilter({ children, todos, setTodos }) {
         );
         break;
       case "Priority":
-        sortedTodos = [...todos].sort((a, b) =>
-          a.priority.localeCompare(b.priority)
-        );
+        sortedTodos = [...todos].sort((a, b) => {
+          return arr.indexOf(a.priority) - arr.indexOf(b.priority);
+        });
         break;
       default:
         sortedTodos = todos;
