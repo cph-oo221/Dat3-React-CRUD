@@ -2,7 +2,7 @@ import fetchData from "../modules/utils.mjs";
 
 const API_URL = "http://localhost:3001/";
 
-// Get All Users
+// Get All Todos
 export function getTodos(callback) {
   fetchData(`${API_URL}todos`, callback, "GET");
 }
