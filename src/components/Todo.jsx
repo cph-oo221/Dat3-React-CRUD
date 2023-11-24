@@ -21,7 +21,7 @@ function Todo() {
     if (update) {
       setEdit(true);
     }
-  }, [todos, update]);
+  }, [update]);
 
   return (
     <div id="todo-container">
